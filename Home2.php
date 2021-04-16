@@ -163,4 +163,20 @@ class Home extends BaseController
 		//$usuario=$mUsuarios->find($id_usuario);
 		return $this->mostrarRegistrosE();
 	}
+	public function eliminarRegistro($id)
+	{
+		$mUsuarios = new mUsuarios();
+		$id_usuario = $id;
+		$mUsuarios -> delete($id_usuario);
+
+		return $this -> mostrarRegistros();
+	}
+	public function eliminarRegistroE($id)
+	{
+		$mUsuariose = new mUsuariose();
+		$id_usuarioE = $id;
+		$mUsuariose -> delete($id_usuarioE);
+
+		return $this -> mostrarRegistrosE();
+	}
 }
