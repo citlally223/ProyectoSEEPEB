@@ -46,7 +46,10 @@
 		</thead>
     <tbody>
     	
-    	<?php foreach ($usuarios as $usuario) {  ?>
+    	<?php 
+        $db =\Config\Database::connect();
+        $query = $db->query("SELECT * FROM empleados");
+        foreach ($query->getResult('array') as $usuario) {  ?>
     		<tr>
     			<td><?php echo $usuario['id_usuarioE']; ?> </td>
     			<td><?php echo $usuario['nombre']; ?> </td>
@@ -58,8 +61,7 @@
                 <td><?php echo $usuario['genero']; ?> </td>
     		</tr>
     		<?php } ?>
-            <?php echo print_r($usuario); 
-            die($usuario); ?><br><br>
+            
 
     </tbody>
 </table>
