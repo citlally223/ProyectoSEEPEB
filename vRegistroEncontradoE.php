@@ -84,7 +84,7 @@
         <div class="mb-3 row">
           <button type="submit"style="color: #F8F9F9 ; background-color: #6C1635;border: #6C1635" class="btn btn-primary mb-3">Actualizar</button>
           <a type ="button"class="btn btn-danger mb-3" href="<?php echo base_url(); ?>/Home/eliminarRegistroE/<?php echo $id_usuarioE; ?>">Eliminar</a>
-          
+          /*boton eliminar*/
         </div>
       </form>
       
